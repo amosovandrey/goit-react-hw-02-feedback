@@ -1,5 +1,7 @@
 import React from 'react';
 import { TextWrapper, Text } from './Statistics.styled';
+import PropTypes from 'prop-types';
+
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <TextWrapper>
@@ -10,6 +12,14 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       <Text>Positive feedback: {positivePercentage}%</Text>
     </TextWrapper>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
 
 export default Statistics;

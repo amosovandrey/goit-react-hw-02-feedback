@@ -20,5 +20,6 @@ export const Text = styled.p`
 
   &:hover {
     background: #2e8a99;
+    cursor: default;
   }
 `;
